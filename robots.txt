@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cis.hmena.com/sitemap.xml
