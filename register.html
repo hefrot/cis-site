@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registro — CIS Foundations N1</title>
+  <meta name="description" content="Registro para CIS Foundations N1 — Mercados y Capital, cohorte septiembre–octubre 2026.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--blue:#163f68;--gold:#d4a341;--ink:#0f172a;--muted:#526174;--bg:#f5f7fb;--line:#dfe6ef}
+    *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}.container{width:min(780px,calc(100% - 30px));margin:auto}.top{background:#0b1725;color:#fff;padding:18px 0}.top a{color:#fff;text-decoration:none;font-weight:800}.hero{padding:48px 0 22px}.hero h1{font-size:clamp(34px,6vw,52px);line-height:1.05;margin:0 0 15px}.hero p{color:var(--muted);font-size:18px}.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:0 16px 50px rgba(15,23,42,.07);margin:22px 0 55px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field{display:grid;gap:7px}.field.full{grid-column:1/-1}label{font-weight:700}input,select,textarea{width:100%;padding:13px;border:1px solid #cfd9e5;border-radius:11px;font:inherit;background:#fff}textarea{min-height:115px;resize:vertical}.check{display:flex;gap:10px;align-items:flex-start}.check input{width:auto;margin-top:5px}.btn{border:0;background:linear-gradient(135deg,var(--gold),#edc36b);color:#17202a;padding:14px 20px;border-radius:999px;font:inherit;font-weight:800;cursor:pointer}.small{font-size:13px;color:var(--muted)}.summary{background:#edf4fb;border-left:4px solid var(--blue);padding:14px 16px;border-radius:10px;margin-bottom:20px}.required{color:#b42318}@media(max-width:650px){.grid{grid-template-columns:1fr}.field.full{grid-column:auto}.card{padding:20px}}
+  </style>
+</head>
+<body>
+<header class="top"><div class="container"><a href="/">← Capital Investor School</a></div></header>
+<main class="container">
+  <section class="hero">
+    <h1>Registro a CIS Foundations N1</h1>
+    <p>Completa tus datos. El equipo de CIS te contactará para confirmar disponibilidad, método de pago y los siguientes pasos.</p>
+  </section>
+  <section class="card">
+    <div class="summary"><strong>Cohorte:</strong> 21 de septiembre–12 de octubre de 2026 · lunes, martes y miércoles · 7:00–9:00 p. m. CDMX · 10 sesiones/20 horas · $1,900 MXN.</div>
+    <form action="https://formspree.io/f/xyznolrg" method="POST">
+      <input type="hidden" name="course" value="CIS Foundations N1 — Mercados y Capital">
+      <input type="hidden" name="cohort" value="2026-09-21">
+      <input type="hidden" name="source" value="cis.hmena.com/register.html">
+      <input type="hidden" name="_subject" value="Nueva solicitud — CIS Foundations N1">
+      <input type="hidden" name="_next" value="https://cis.hmena.com/thanks.html">
+      <div class="grid">
+        <div class="field"><label for="name">Nombre completo <span class="required">*</span></label><input id="name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="email">Correo electrónico <span class="required">*</span></label><input id="email" type="email" name="email" autocomplete="email" required></div>
+        <div class="field"><label for="whatsapp">WhatsApp con lada <span class="required">*</span></label><input id="whatsapp" name="whatsapp" type="tel" autocomplete="tel" placeholder="+52..." required></div>
+        <div class="field"><label for="country">País / ciudad <span class="required">*</span></label><input id="country" name="country_city" autocomplete="address-level2" required></div>
+        <div class="field"><label for="experience">Experiencia actual <span class="required">*</span></label><select id="experience" name="experience" required><option value="">Selecciona</option><option>Estoy empezando desde cero</option><option>Conozco conceptos básicos</option><option>Ya invierto, pero quiero ordenar mi proceso</option></select></div>
+        <div class="field"><label for="market">Interés principal <span class="required">*</span></label><select id="market" name="interest" required><option value="">Selecciona</option><option>Bolsa y ETF</option><option>Criptoactivos</option><option>Ambos</option><option>Educación financiera general</option></select></div>
+        <div class="field"><label for="payment">Método de pago preferido <span class="required">*</span></label><select id="payment" name="payment_preference" required><option value="">Selecciona</option><option>Transferencia BBVA/SPEI — $1,900 MXN</option><option>Tarjeta/Stripe — avisarme cuando esté habilitado</option></select></div>
+        <div class="field"><label for="invoice">¿Requieres factura? <span class="required">*</span></label><select id="invoice" name="invoice_required" required><option value="">Selecciona</option><option>No</option><option>Sí — entiendo que el precio es $1,900 MXN + IVA</option></select></div>
+        <div class="field full"><label for="goal">¿Qué te gustaría aprender o resolver?</label><textarea id="goal" name="learning_goal" placeholder="Cuéntanos brevemente tu objetivo."></textarea></div>
+        <div class="field full check"><input id="consent" type="checkbox" name="consent_contact" value="yes" required><label for="consent">Autorizo a CIS a contactarme por correo o WhatsApp sobre esta cohorte. <span class="required">*</span></label></div>
+        <div class="field full check"><input id="ack" type="checkbox" name="education_acknowledgement" value="yes" required><label for="ack">Entiendo que el programa ofrece educación financiera general, no asesoría personalizada ni promesa de rendimiento. <span class="required">*</span></label></div>
+        <div class="field full"><button class="btn" type="submit">Enviar solicitud</button></div>
+      </div>
+    </form>
+    <p class="small">Los datos bancarios no se publican en esta página. Se envían después de validar el registro. CIS no solicita contraseñas, códigos 2FA, claves bancarias ni información sensible.</p>
+  </section>
+</main>
+</body>
+</html>
