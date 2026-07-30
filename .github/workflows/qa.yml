@@ -1,0 +1,39 @@
+name: CIS compliance QA
+
+on:
+  pull_request:
+    branches: ["main"]
+  push:
+    branches: ["agent/cis-foundations-landing-payments-20260728"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  compliance:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run PROFECO and ecommerce QA
+        run: bash ops/qa-profeco.sh
+
+      - name: Check whitespace and unresolved merge markers
+        run: |
+          git diff --check HEAD^ HEAD || true
+          if grep -RniE '^(<<<<<<<|=======|>>>>>>>)' --include='*.html' --include='*.js' --include='*.gs' --include='*.md' .; then
+            echo 'Unresolved merge marker found' >&2
+            exit 1
+          fi
+
+      - name: Confirm public pages are static files
+        run: |
+          python3 -m http.server 18020 --bind 127.0.0.1 >/tmp/cis-http.log 2>&1 &
+          pid=$!
+          trap 'kill "$pid" 2>/dev/null || true' EXIT
+          sleep 2
+          for path in / /inscripcion.html /payment.html /terms.html /privacy.html /proveedor.html /cookies.html /codigo-etica.html /cancelacion.html /bienvenida.html; do
+            curl -fsSI "http://127.0.0.1:18020${path}" >/dev/null
+          done

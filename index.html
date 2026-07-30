@@ -1,92 +1,261 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CIS — Conocimiento para Invertir y Superar</title>
-<meta name="description" content="Aprende a invertir desde cero con Héctor Mena. Cursos, herramientas y guía paso a paso.">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
-<meta property="og:title" content="CIS — Conocimiento para Invertir y Superar">
-<meta property="og:description" content="Aprende a invertir desde cero con Héctor Mena. Cursos, herramientas y guía paso a paso.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://cis.hmena.com/">
-<meta property="og:image" content="https://cis.hmena.com/assets/img/instructor-avatar.png">
-<meta name="twitter:card" content="summary_large_image">
-<style>
-:root{--cis-blue:#1e5a96;--cis-gold:#d4a341;--ink:#0f172a;--muted:#64748b;--bg:#f7fafc}
-*{box-sizing:border-box}html,body{margin:0;padding:0;scroll-behavior:smooth}
-body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
-a{color:var(--cis-blue);text-decoration:none;font-weight:700}a:hover{text-decoration:underline}
-.container{max-width:1100px;margin:0 auto;padding:0 20px}
-header{background:rgba(15,23,42,.9);color:#fff;position:sticky;top:0;z-index:20;backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.1)}
-.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-.brand{display:flex;align-items:center;gap:10px}.brand .name{font-weight:800;color:#fff}
-nav a{color:#cbd5e1;margin-left:20px;font-weight:500}nav a:hover{color:#fff;text-decoration:none}
-.hero{background:radial-gradient(1200px 500px at 20% -10%, rgba(30,90,150,.25), transparent),linear-gradient(135deg,#1a2332 0%,#0f1419 100%);color:#fff;padding:64px 0;text-align:center}
-.badge{display:inline-block;background:rgba(212,163,65,.18);color:#fed7aa;padding:6px 12px;border:1px solid rgba(212,163,65,.45);border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.3px}
-.title{font-size:42px;font-weight:800;margin:10px 0;line-height:1.1;letter-spacing:-1px}
-.subtitle{opacity:.9;max-width:700px;margin:0 auto}
-.cta{display:inline-block;margin-top:18px;background:linear-gradient(135deg,var(--cis-gold),#b9872f);color:#0f1419;padding:12px 20px;border-radius:999px;font-weight:800}
-.section{padding:50px 0}.split{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
-.list-clean{list-style:none;margin:0;padding:0}.list-clean li{display:flex;gap:10px;align-items:flex-start;margin:12px 0}.list-clean .dot{width:8px;height:8px;border-radius:50%;background:var(--cis-gold);margin-top:10px}
-.card{background:#fff;border-radius:16px;padding:24px;box-shadow:0 10px 30px rgba(15,23,42,.08);border:1px solid #eef2f7}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:24px}
-footer{background:#0f1419;color:#cbd5e1;padding:22px 0;margin-top:40px;text-align:center}
-.small{color:var(--muted);font-size:14px}
-.instructor-photo{width:100%;max-width:360px;border-radius:24px;box-shadow:0 15px 40px rgba(30,90,150,.2)}
-form .row{display:flex;gap:12px;flex-wrap:wrap}input,textarea{width:100%;padding:12px;border:1px solid #e2e8f0;border-radius:10px}button{all:unset;background:linear-gradient(135deg,var(--cis-gold),#b9872f);padding:12px 20px;border-radius:999px;color:#0f1419;font-weight:800;cursor:pointer}
-@media (max-width:900px){.split{grid-template-columns:1fr}.title{font-size:34px}}
-</style>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BPRSKDJ26"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','G-BPRSKDJ26');</script>
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aprende a Invertir desde Cero | CIS Foundations N1</title>
+  <meta name="description" content="Curso práctico en vivo para principiantes: entiende los mercados, aprende a gestionar el riesgo y construye un portafolio educativo paso a paso.">
+  <link rel="canonical" href="https://cis.hmena.com/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Aprende a Invertir desde Cero">
+  <meta property="og:description" content="10 sesiones en vivo · 20 horas · Inicio 21 de septiembre de 2026 · No necesitas experiencia.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cis.hmena.com/">
+  <meta property="og:image" content="https://cis.hmena.com/assets/logo-cis-transparente.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/assets/cis-premium-v3.css">
 </head>
-<body>
-<header><div class="container header-inner">
-  <div class="brand"><a href="/" style="color:#fff;text-decoration:none"><div class="name">Capital Investor School</div></a></div>
-  <nav><a href="/#cursos">Cursos</a><a href="/#recursos">Recursos</a><a href="/about.html">Quiénes somos</a><a href="/contact.html">Contacto</a></nav>
-</div></header>
-<section class="hero"><div class="container">
-  <span class="badge">Escuela de Inversión Profesional</span>
-  <h1 class="title">Conocimiento para <br/>Invertir y Superar</h1>
-  <p class="subtitle">Ruta de principiante a avanzado con ejercicios, plantillas descargables y metodología de riesgo profesional.</p>
-  <a class="cta" href="/#cursos">Ver Cursos</a>
-  <a class="cta" style="margin-left:8px;background:#fff" href="/#recursos">Descargar Recursos</a>
-</div></section>
+<body class="home-page">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-<section id="instructor" class="section">
-  <div class="container split">
-    <div>
-      <h2>Tu Instructor: Héctor Mena</h2>
-      <p>Abogado fiscal internacional e inversionista. Mi misión en CIS es enseñarte a invertir con metodología profesional, controlando el riesgo y tus emociones para construir patrimonio a largo plazo.</p>
-      <ul class="list-clean">
-        <li><div class="dot"></div><div><strong>Lenguaje claro y directo</strong><br><span class="small">Sin jerga innecesaria; ejemplos reales de LATAM.</span></div></li>
-        <li><div class="dot"></div><div><strong>Enfoque práctico</strong><br><span class="small">Operaciones demo, checklists y diario CIS.</span></div></li>
-        <li><div class="dot"></div><div><strong>Disciplina sobre emoción</strong><br><span class="small">Riesgo 1–2% por operación y R:R ≥ 1:1.5.</span></div></li>
-      </ul>
+<header class="site-header">
+  <div class="container site-nav">
+    <a class="brand-lockup" href="/" aria-label="Capital Investor School, inicio">
+      <img src="/assets/logo-cis-transparente.png" width="500" height="500" alt="">
+      <span class="brand-copy"><strong>Capital Investor School</strong><span>Foundations N1</span></span>
+    </a>
+    <nav class="site-links" aria-label="Navegación principal">
+      <a href="#programa">Programa</a>
+      <a href="#proceso">Cómo funciona</a>
+      <a href="#instructores">Instructores</a>
+      <a href="#pagos">Pagos</a>
+      <a href="#preguntas">Preguntas</a>
+      <a class="nav-cta" href="/inscripcion.html">Reservar</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+  <section class="index-hero">
+    <div class="container hero-layout">
+      <div class="hero-copy">
+        <p class="eyebrow">Programa en vivo para principiantes</p>
+        <h1>Aprende a Invertir <span>desde Cero</span></h1>
+        <p class="academic-name">CIS Foundations N1 — Mercados y Capital</p>
+        <p class="hero-lead">Curso práctico para adultos principiantes: entiende cómo funcionan los mercados, aprende a gestionar el riesgo y construye tu primer portafolio educativo paso a paso.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="/inscripcion.html">Reservar mi lugar — desde $1,900 MXN</a>
+        </div>
+        <div class="hero-chips" aria-label="Características principales">
+          <span class="hero-chip">Inicio 21 septiembre 2026</span>
+          <span class="hero-chip">10 sesiones</span>
+          <span class="hero-chip">20 horas</span>
+          <span class="hero-chip">En vivo</span>
+          <span class="hero-chip">Sin experiencia previa</span>
+        </div>
+      </div>
+
+      <aside class="course-console" aria-label="Resumen del programa">
+        <div class="console-head">
+          <img src="/assets/logo-cis-transparente.png" width="500" height="500" alt="">
+          <div><strong>Ruta formativa</strong><small>Foundations N1</small></div>
+          <span class="live-status">EN VIVO</span>
+        </div>
+        <div class="console-body">
+          <div class="console-kicker">Precio de entrada</div>
+          <div class="console-price">$1,900 MXN</div>
+          <p>Monto total por BBVA/SPEI. Tarjeta: $1,999 MXN total y pago único.</p>
+          <div class="console-path" aria-hidden="true">
+            <svg viewBox="0 0 420 130" role="img">
+              <defs><linearGradient id="route" x1="0" x2="1"><stop stop-color="#58aee6"/><stop offset="1" stop-color="#efd184"/></linearGradient></defs>
+              <path d="M18 101 C76 92,88 76,138 80 S211 57,248 58 S318 24,397 19" fill="none" stroke="url(#route)" stroke-width="4" stroke-linecap="round"/>
+              <g fill="#efd184" stroke="#fff" stroke-width="2"><circle cx="18" cy="101" r="5"/><circle cx="138" cy="80" r="5"/><circle cx="248" cy="58" r="5"/><circle cx="397" cy="19" r="5"/></g>
+            </svg>
+          </div>
+          <div class="console-metrics">
+            <div class="console-metric"><strong>10</strong><span>sesiones</span></div>
+            <div class="console-metric"><strong>20h</strong><span>duración</span></div>
+            <div class="console-metric"><strong>40</strong><span>cupo máximo</span></div>
+          </div>
+        </div>
+      </aside>
     </div>
-    <div style="text-align:center"><img src="/assets/img/instructor-avatar.png" alt="Avatar del instructor CIS" class="instructor-photo"></div>
+  </section>
+
+  <section class="trust-strip" aria-label="Datos de la cohorte">
+    <div class="container trust-grid">
+      <div class="trust-item"><span>Inicio</span><strong>Lunes 21 septiembre 2026</strong></div>
+      <div class="trust-item"><span>Horario CDMX</span><strong>Lun., mar. y mié. · 7:00–9:00 p. m.</strong></div>
+      <div class="trust-item"><span>Duración</span><strong>10 sesiones · 20 horas</strong></div>
+      <div class="trust-item"><span>Cupo</span><strong>Mínimo 5 · máximo 40</strong></div>
+      <div class="trust-item"><span>Modalidad</span><strong>En línea y en vivo</strong></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Una base financiera útil</p>
+        <h2>Comprender antes de invertir</h2>
+        <p>Contenido claro, ejercicios guiados y aplicación práctica para construir criterio sin jerga innecesaria.</p>
+      </div>
+      <div class="learning-grid">
+        <article class="learning-card"><span class="learning-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 20V10m5 10V4m5 16v-7m5 7V7" stroke-width="1.8"/></svg></span><h3>Mercados</h3><p>Participantes, emisores, intermediarios, regulación y cómo se conectan los mercados.</p></article>
+        <article class="learning-card"><span class="learning-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 18h16M6 15l3-4 3 2 5-7 2 2" stroke-width="1.8"/></svg></span><h3>Acciones y ETF</h3><p>Funcionamiento, diversificación, costos, liquidez, tracking y riesgos principales.</p></article>
+        <article class="learning-card"><span class="learning-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="10" cy="10" r="5" stroke-width="1.8"/><path d="m14 14 5 5M10 7v6M7 10h6" stroke-width="1.8"/></svg></span><h3>Valuación</h3><p>Calidad del negocio, estados financieros, ratios, escenarios y margen de seguridad.</p></article>
+        <article class="learning-card"><span class="learning-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m4 17 5-5 3 3 7-9M15 6h4v4" stroke-width="1.8"/></svg></span><h3>Trading</h3><p>Probabilidad, disciplina, sesgos, tendencia, soportes y resistencias en contexto.</p></article>
+        <article class="learning-card"><span class="learning-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3 5 6v5c0 5 3 8 7 10 4-2 7-5 7-10V6l-7-3Z" stroke-width="1.8"/><path d="m9 12 2 2 4-5" stroke-width="1.8"/></svg></span><h3>Gestión de riesgo</h3><p>Tamaño de posición, stop, R-múltiple, checklist y bitácora para documentar el proceso.</p></article>
+        <article class="learning-card"><span class="learning-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2v20M8 6h6a3 3 0 0 1 0 6h-4a3 3 0 0 0 0 6h6" stroke-width="1.8"/></svg></span><h3>Cripto y seguridad</h3><p>Blockchain, Bitcoin, Ethereum, CEX/DEX, wallets, custodia, seed phrase y 2FA.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="proceso" class="process-section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Proceso claro</p>
+        <h2>Reserva, paga y recibe acceso</h2>
+        <p>La reserva es el primer paso; tu lugar se confirma cuando CIS identifica y valida el pago.</p>
+      </div>
+      <div class="process-grid">
+        <article class="process-card"><h3>Reserva</h3><p>Comparte solamente nombre, WhatsApp y, si quieres, correo. Recibirás un folio y acuse.</p></article>
+        <article class="process-card"><h3>Paga</h3><p>Elige BBVA/SPEI por $1,900 MXN total o Stripe por $1,999 MXN total, pago único.</p></article>
+        <article class="process-card"><h3>Recibe acceso</h3><p>Después de validar el pago completas tu bienvenida y recibes calendario, LMS e instrucciones.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="programa" class="program-section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Programa académico</p>
+        <h2>Diez sesiones. Una ruta completa.</h2>
+        <p>Del 21 de septiembre al 12 de octubre de 2026. Abre cada sesión para revisar su contenido.</p>
+      </div>
+      <div class="program-grid">
+        <details class="program-item" open><summary><span class="program-number">01</span><span class="program-title">Antes de invertir, entiende quién mueve el mercado</span><span class="program-plus">+</span></summary><p class="program-copy">Participantes, emisores, intermediarios, regulación, mercados organizados y OTC.</p></details>
+        <details class="program-item"><summary><span class="program-number">02</span><span class="program-title">Conviértete en dueño de una parte de grandes empresas</span><span class="program-plus">+</span></summary><p class="program-copy">Acciones, bolsas, brokers, mercado primario/secundario, custodia y comisiones.</p></details>
+        <details class="program-item"><summary><span class="program-number">03</span><span class="program-title">No pongas todos tus huevos en una sola canasta</span><span class="program-plus">+</span></summary><p class="program-copy">Diversificación, costos, liquidez, tracking y riesgos principales.</p></details>
+        <details class="program-item"><summary><span class="program-number">04</span><span class="program-title">Descubre inversiones que van más allá de comprar acciones</span><span class="program-plus">+</span></summary><p class="program-copy">Exposición inmobiliaria, futuros, forwards y CFD desde una perspectiva introductoria.</p></details>
+        <details class="program-item"><summary><span class="program-number">05</span><span class="program-title">Aprende a detectar empresas fuertes</span><span class="program-plus">+</span></summary><p class="program-copy">Calidad del negocio, ventajas competitivas y estados financieros.</p></details>
+        <details class="program-item"><summary><span class="program-number">06</span><span class="program-title">Deja de comprar sin saber si estás pagando demasiado</span><span class="program-plus">+</span></summary><p class="program-copy">Ratios básicos, valuación guiada, escenarios y margen de seguridad.</p></details>
+        <details class="program-item"><summary><span class="program-number">07</span><span class="program-title">Controla el miedo, la emoción y las decisiones impulsivas</span><span class="program-plus">+</span></summary><p class="program-copy">Probabilidad, disciplina, sesgos, tendencia, soportes y resistencias en contexto.</p></details>
+        <details class="program-item"><summary><span class="program-number">08</span><span class="program-title">Protege tu capital antes de buscar ganancias</span><span class="program-plus">+</span></summary><p class="program-copy">Riesgo por operación, tamaño de posición, stop, R-múltiple, checklist y bitácora.</p></details>
+        <details class="program-item"><summary><span class="program-number">09</span><span class="program-title">Explora Bitcoin y cripto sin descuidar tu seguridad</span><span class="program-plus">+</span></summary><p class="program-copy">Blockchain, Bitcoin, Ethereum, CEX/DEX, wallets, custodia, seed phrase y 2FA.</p></details>
+        <details class="program-item"><summary><span class="program-number">10</span><span class="program-title">Diseña un portafolio con una estrategia clara</span><span class="program-plus">+</span></summary><p class="program-copy">Presentación y defensa de un portafolio hipotético con objetivos, asignación y reglas.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="outcomes-section">
+    <div class="container outcome-layout">
+      <div class="outcome-visual" aria-hidden="true"><div class="outcome-orbit"></div><img src="/assets/logo_school.jpg" width="1024" height="1024" loading="lazy" alt=""></div>
+      <div>
+        <div class="section-heading">
+          <p class="eyebrow">Resultado del alumno</p>
+          <h2>Del concepto a un proceso documentado</h2>
+          <p>Al terminar la ruta tendrás una estructura para analizar, comparar y comunicar decisiones educativas.</p>
+        </div>
+        <ul class="outcome-list">
+          <li>Comprender mercados y participantes.</li>
+          <li>Evaluar instrumentos y sus riesgos.</li>
+          <li>Crear un portafolio hipotético.</li>
+          <li>Aplicar gestión inicial de riesgo.</li>
+          <li>Evitar fraudes y errores comunes.</li>
+          <li>Documentar el proceso con checklist y bitácora.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="instructores" class="instructors-section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">La mesa académica</p>
+        <h2>Instructores del programa</h2>
+        <p>Acompañamiento académico, operación y seguimiento durante las diez sesiones.</p>
+      </div>
+      <div class="instructor-grid">
+        <article class="instructor-card">
+          <div class="portrait-wrap"><img src="/assets/fernando.jpg" width="765" height="1024" loading="lazy" alt="Retrato de Luis Fernando Figueroa Morales"></div>
+          <div class="instructor-copy"><span class="instructor-role">Instructor principal</span><h3>Luis Fernando Figueroa Morales</h3><p>Instructor principal y revisor académico de las 10 sesiones.</p></div>
+        </article>
+        <article class="instructor-card secondary">
+          <div class="portrait-wrap"><img src="/assets/hector.jpg" width="765" height="1024" loading="lazy" alt="Retrato de Héctor Mena"></div>
+          <div class="instructor-copy"><span class="instructor-role">Co-instructor</span><h3>Héctor Mena</h3><p>Co-instructor, producción académica, operación y seguimiento de alumnos.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="pagos" class="pricing-section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Precios totales</p>
+        <h2>Dos métodos, un solo programa</h2>
+        <p>Los importes exhibidos incluyen impuestos y cargos obligatorios aplicables. No hay mensualidades ni renovación automática.</p>
+      </div>
+      <div class="pricing-grid">
+        <article class="pricing-card primary">
+          <span class="pricing-tag">Opción principal</span><h3>Transferencia BBVA/SPEI</h3><p class="pricing-amount">$1,900 MXN</p>
+          <ul><li>Monto total.</li><li>Datos bancarios verificados después de reservar.</li><li>Confirmación electrónica después de validar el pago.</li></ul>
+          <a class="btn btn-gold" href="/inscripcion.html">Reservar con SPEI</a>
+        </article>
+        <article class="pricing-card">
+          <span class="pricing-tag">Pago único</span><h3>Tarjeta mediante Stripe</h3><p class="pricing-amount">$1,999 MXN</p>
+          <ul><li>Monto total y pago único.</li><li>Sin suscripción ni renovación automática.</li><li>CFDI, cuando proceda, sin costo adicional por facturar.</li></ul>
+          <a class="btn btn-navy" href="/inscripcion.html">Reservar con tarjeta</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="preguntas">
+    <div class="container faq-layout">
+      <div class="section-heading">
+        <p class="eyebrow">Preguntas frecuentes</p>
+        <h2>Antes de reservar</h2>
+        <p>Respuestas directas sobre experiencia, compra, acceso y protección.</p>
+      </div>
+      <div class="faq-list">
+        <details><summary>¿Necesito experiencia previa?</summary><p>No. El programa está diseñado para personas principiantes y no requiere conocimientos previos.</p></details>
+        <details><summary>¿La reserva confirma mi lugar?</summary><p>No. La reserva genera un folio; tu lugar queda confirmado después de que CIS identifica y valida el pago.</p></details>
+        <details><summary>¿Es una suscripción?</summary><p>No. SPEI cuesta $1,900 MXN total y Stripe $1,999 MXN total como pago único, sin renovación automática.</p></details>
+        <details><summary>¿Cuándo recibo acceso?</summary><p>Después del pago completas la bienvenida. El acceso al LMS y las instrucciones se entregan como máximo 24 horas antes de la primera sesión si pago y activación están completos.</p></details>
+        <details><summary>¿Las clases quedan grabadas?</summary><p>Sí. Las grabaciones estarán disponibles mientras la cuenta del alumno y el programa permanezcan activos, bajo las condiciones publicadas.</p></details>
+        <details><summary>¿Qué pasa si no se alcanza el mínimo?</summary><p>CIS ofrecerá una nueva fecha. Puedes aceptarla o solicitar la devolución íntegra.</p></details>
+        <details><summary>¿Puedo cancelar o pedir una aclaración?</summary><p>Sí. Existe un formulario público con folio y acuse. También puedes revocar dentro de los 5 días hábiles siguientes a la compra.</p></details>
+        <details><summary>¿Esto es asesoría financiera?</summary><p>No. Es educación financiera general; no constituye asesoría personalizada, recomendación de inversión ni promesa de rendimiento.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="container">
+      <div class="final-cta-card">
+        <h2>Tu primer paso no es arriesgar dinero. Es aprender a decidir.</h2>
+        <p>Reserva con nombre y WhatsApp. Las condiciones esenciales, precios totales, entrega y cancelación están disponibles antes del pago.</p>
+        <a class="btn btn-gold" href="/inscripcion.html">Reservar mi lugar — desde $1,900 MXN</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-brand"><img src="/assets/logo-cis-transparente.png" width="500" height="500" loading="lazy" alt=""><strong>Capital Investor School</strong></div>
+      <p class="footer-disclaimer">Proveedor: C INV SCHOOL, S.A.S. de C.V. · RFC CIS210413U54. Educación financiera general; no constituye asesoría financiera, fiscal o legal personalizada, recomendación de inversión ni promesa de rendimiento.</p>
+    </div>
+    <div><h3>Información</h3><div class="footer-links"><a href="/proveedor.html">Proveedor</a><a href="/terms.html">Términos</a><a href="/privacy.html">Privacidad</a><a href="/cookies.html">Cookies</a><a href="/codigo-etica.html">Código de ética</a><a href="/cancelacion.html">Cancelación</a></div></div>
+    <div><h3>Contacto</h3><div class="footer-links"><a href="https://wa.me/524492781853" rel="noopener">+52 449 278 1853</a><a href="mailto:capinvestorschool@gmail.com">capinvestorschool@gmail.com</a><a href="https://lms.hmena.com">Portal LMS</a></div></div>
   </div>
-</section>
+</footer>
 
-<section id="cursos" class="section"><div class="container"><h2>Nuestros Cursos</h2>
-  <div class="grid">
-    <div class="card"><h3>Inversión en Bolsa desde Cero</h3><p class="small">Nivel básico a avanzado · 8 semanas · Proyecto final.</p><a class="cta" href="/courses/bolsa/">Ir al curso</a></div>
-    <div class="card"><h3>Criptomonedas: De Novato a Inversionista</h3><p class="small">Próximamente · wallets, seguridad, DCA y riesgos.</p><a class="cta" href="#">Notificarme</a></div>
-  </div>
-</div></section>
-
-<section id="recursos" class="section"><div class="container"><div class="card"><h3>Comienza Aquí: Recursos Gratuitos</h3>
-  <ul class="list-clean">
-    <li><div class="dot"></div><a href="/assets/CIS_Glosario_Bolsa.pdf" target="_blank">Glosario de Bolsa y Trading (PDF)</a></li>
-    <li><div class="dot"></div><a href="/assets/CIS_Calculadora_Riesgo.pdf" target="_blank">Calculadora de Riesgo (PDF)</a></li>
-    <li><div class="dot"></div><a href="/assets/CIS_Diario_Trading.pdf" target="_blank">Diario de Trading y Plan de Operación (PDF)</a></li>
-  </ul>
-  <p class="small" style="margin-top:8px">Coloca tus PDFs en <code>/assets/</code> con esos nombres.</p>
-</div></div></section>
-
-<footer><div class="container">© 2025 CIS — Capital Investor School · Héctor Mena</div></footer>
-</body></html>
+<a class="whatsapp-float" href="https://wa.me/524492781853" rel="noopener" aria-label="Abrir WhatsApp oficial">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.7 7.1L4 20l1.4-4.2A8 8 0 1 1 20 11.5Z" stroke-width="1.8"/><path d="M9 8.4c.4 2.3 2 4 4.4 4.7l1.1-1 1.7.8c-.3 1.5-1.2 2.1-2.7 2-3.7-.4-6.4-3.2-6.6-6.8 0-1.2.7-2 1.9-2.3L9.6 7 9 8.4Z" stroke-width="1.4"/></svg>
+</a>
+<div class="mobile-cta"><span>Foundations N1<br>21 septiembre 2026</span><a href="/inscripcion.html">Reservar · $1,900</a></div>
+<script src="/assets/cis-consent.js" defer></script>
+</body>
+</html>
