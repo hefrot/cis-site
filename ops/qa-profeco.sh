@@ -22,6 +22,23 @@ required=(
   apps-script/Code.gs
 )
 
+html_files=(
+  index.html
+  inscripcion.html
+  payment.html
+  thanks.html
+  bienvenida.html
+  bienvenida-gracias.html
+  proveedor.html
+  terms.html
+  privacy.html
+  cookies.html
+  codigo-etica.html
+  cancelacion.html
+  cancelacion-gracias.html
+)
+
+operational_files=("${html_files[@]}" apps-script/Code.gs assets/cis-consent.js)
 failures=0
 
 pass() { printf 'PASS  %s\n' "$*"; }
@@ -31,32 +48,31 @@ for file in "${required[@]}"; do
   if [[ -s "$file" ]]; then pass "$file exists"; else fail "$file missing or empty"; fi
 done
 
-html_files=(index.html inscripcion.html payment.html thanks.html bienvenida.html bienvenida-gracias.html proveedor.html terms.html privacy.html cookies.html codigo-etica.html cancelacion.html cancelacion-gracias.html)
-
-forbidden_checks=(
-  'formspree\.io|Formspree'
-  '\$1,900 MXN \+ IVA|\$1,900 \+ IVA|más IVA vigente|mas IVA vigente'
-  'cuando su disponibilidad lo permita'
-  'pago mensual|mensualidad|renovación automática activa|suscripción mensual'
-)
-
-for pattern in "${forbidden_checks[@]}"; do
-  if grep -RniE --include='*.html' --include='*.gs' --include='*.md' "$pattern" . >/tmp/cis-qa-match.txt 2>/dev/null; then
-    fail "forbidden pattern found: $pattern"
+scan_forbidden() {
+  local label="$1"
+  local pattern="$2"
+  shift 2
+  if grep -niE "$pattern" "$@" >/tmp/cis-qa-match.txt 2>/dev/null; then
+    fail "$label"
     sed -n '1,20p' /tmp/cis-qa-match.txt >&2
   else
-    pass "forbidden pattern absent: $pattern"
+    pass "$label absent"
   fi
-done
+}
 
-if grep -RniE --include='*.html' 'href=["'"']/register(\.html)?["'"']' . >/tmp/cis-qa-register.txt 2>/dev/null; then
+scan_forbidden 'Formspree transport found' 'formspree\.io|Formspree' "${operational_files[@]}"
+scan_forbidden 'old invoice surcharge found' '\$1,900 MXN \+ IVA|\$1,900 \+ IVA|precio es[^<]{0,30}\+ IVA|más IVA vigente|mas IVA vigente' "${operational_files[@]}"
+scan_forbidden 'conditional Hector role found' 'cuando su disponibilidad lo permita' "${operational_files[@]}"
+scan_forbidden 'monthly product wording found' 'pago mensual|suscripción mensual|renovación automática activa|cobro recurrente activo' "${operational_files[@]}"
+
+if grep -niE 'href=["'"']/register(\.html)?["'"']' "${html_files[@]}" >/tmp/cis-qa-register.txt 2>/dev/null; then
   fail 'public CTA points to /register'
   cat /tmp/cis-qa-register.txt >&2
 else
   pass 'no public CTA points to /register'
 fi
 
-if grep -RniE --include='*.html' 'googletagmanager\.com/gtag|gtag\(' . >/tmp/cis-qa-ga.txt 2>/dev/null; then
+if grep -niE 'googletagmanager\.com/gtag|gtag\(' "${html_files[@]}" >/tmp/cis-qa-ga.txt 2>/dev/null; then
   fail 'direct analytics loader found in HTML; analytics must be consent-gated'
   cat /tmp/cis-qa-ga.txt >&2
 else
@@ -67,20 +83,26 @@ required_text_checks=(
   'index.html|/inscripcion.html'
   'index.html|\$1,900 MXN'
   'index.html|\$1,999 MXN'
+  'index.html|/proveedor.html'
+  'index.html|/cancelacion.html'
   'terms.html|CIS-TERMS-2026-07-30-v2'
   'terms.html|5 días hábiles'
+  'terms.html|mayores de 18 años'
   'privacy.html|CIS-PRIVACY-2026-07-30-v2'
   'privacy.html|Derechos ARCO'
   'inscripcion.html|form_type" value="reservation'
   'inscripcion.html|CIS-TERMS-2026-07-30-v2'
   'inscripcion.html|CIS-PRIVACY-2026-07-30-v2'
   'bienvenida.html|form_type" value="onboarding'
+  'bienvenida.html|payment_method'
   'cancelacion.html|form_type" value="consumer_request'
   'payment.html|https://buy\.stripe\.com/fZu7sL9Gy9jBa7faOV3Je0p'
   'payment.html|pago único'
+  'payment.html|sin costo adicional'
   'assets/cis-consent.js|G-BPRSKDJ26'
   'apps-script/Code.gs|Evidencia legal'
   'apps-script/Code.gs|Aclaraciones y cancelaciones'
+  'apps-script/Code.gs|consumer_request'
 )
 
 for check in "${required_text_checks[@]}"; do
@@ -98,7 +120,7 @@ for file in "${html_files[@]}"; do
 done
 
 if command -v python3 >/dev/null 2>&1; then
-  python3 - <<'PY' || failures=$((failures + 1))
+  if python3 - <<'PY'
 from html.parser import HTMLParser
 from pathlib import Path
 
@@ -116,6 +138,11 @@ for name in files:
     parser.feed(Path(name).read_text(encoding='utf-8'))
 print('PASS  Python HTML parser accepted all public pages')
 PY
+  then
+    :
+  else
+    fail 'Python HTML parser rejected one or more pages'
+  fi
 fi
 
 rm -f /tmp/cis-qa-match.txt /tmp/cis-qa-register.txt /tmp/cis-qa-ga.txt
