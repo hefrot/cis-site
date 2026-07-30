@@ -5,6 +5,8 @@ ROOT="${1:-.}"
 cd "$ROOT"
 
 required=(
+  about.html
+  contact.html
   index.html
   inscripcion.html
   payment.html
@@ -23,6 +25,8 @@ required=(
 )
 
 html_files=(
+  about.html
+  contact.html
   index.html
   inscripcion.html
   payment.html
@@ -65,7 +69,7 @@ scan_forbidden 'old invoice surcharge found' '\$1,900 MXN \+ IVA|\$1,900 \+ IVA|
 scan_forbidden 'conditional Hector role found' 'cuando su disponibilidad lo permita' "${operational_files[@]}"
 scan_forbidden 'monthly product wording found' 'pago mensual|suscripción mensual|renovación automática activa|cobro recurrente activo' "${operational_files[@]}"
 
-if grep -niE 'href=["'"']/register(\.html)?["'"']' "${html_files[@]}" >/tmp/cis-qa-register.txt 2>/dev/null; then
+if grep -niE "href=[\"']/register(\\.html)?[\"']" "${html_files[@]}" >/tmp/cis-qa-register.txt 2>/dev/null; then
   fail 'public CTA points to /register'
   cat /tmp/cis-qa-register.txt >&2
 else
@@ -125,6 +129,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 
 files = [
+    'about.html','contact.html',
     'index.html','inscripcion.html','payment.html','thanks.html','bienvenida.html',
     'bienvenida-gracias.html','proveedor.html','terms.html','privacy.html',
     'cookies.html','codigo-etica.html','cancelacion.html','cancelacion-gracias.html'
