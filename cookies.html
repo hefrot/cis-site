@@ -9,8 +9,9 @@
   <style>
     :root{--navy:#071a2e;--blue:#0f416d;--gold:#e4b64f;--ink:#122033;--muted:#667085;--paper:#f6f3ec;--line:#d9e0e8}*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65}.top{background:var(--navy);padding:18px 0}.container{width:min(900px,calc(100% - 32px));margin:auto}.top a{color:#fff;text-decoration:none;font-weight:800}.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:clamp(22px,5vw,42px);margin:36px 0 64px;box-shadow:0 20px 60px rgba(7,26,46,.08)}h1,h2{line-height:1.18}h1{font-size:clamp(36px,6vw,58px)}h2{margin-top:30px;color:var(--navy)}a{color:var(--blue);font-weight:750}.choice{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0}.btn{border:0;border-radius:999px;padding:13px 18px;font:inherit;font-weight:800;cursor:pointer}.accept{background:var(--gold);color:#17202b}.reject{background:#e7edf3;color:var(--navy)}.small{font-size:14px;color:var(--muted)}table{border-collapse:collapse;width:100%}th,td{border:1px solid var(--line);padding:12px;text-align:left;vertical-align:top}@media(max-width:650px){table{display:block;overflow-x:auto}}
   </style>
+  <link rel="stylesheet" href="/assets/cis-premium-v3.css">
 </head>
-<body>
+<body class="document-page">
 <header class="top"><div class="container"><a href="/">← Capital Investor School</a></div></header>
 <main class="container"><article class="card">
   <p class="small">Versión: CIS-COOKIES-2026-07-30-v1.</p>
@@ -21,9 +22,9 @@
   <table>
     <thead><tr><th>Categoría</th><th>Uso</th><th>Condición</th></tr></thead>
     <tbody>
-      <tr><td>Necesarias</td><td>Seguridad, navegación, almacenamiento de la elección de cookies y funcionamiento básico.</td><td>Siempre activas porque el sitio no funciona correctamente sin ellas.</td></tr>
-      <tr><td>Analítica</td><td>Medición agregada de páginas visitadas y rendimiento mediante Google Analytics u otra herramienta informada.</td><td>Solo se carga después de aceptar.</td></tr>
-      <tr><td>Publicidad</td><td>Actualmente CIS no activa cookies de publicidad personalizada en esta landing.</td><td>Inactivas.</td></tr>
+      <tr><td data-label="Categoría">Necesarias</td><td data-label="Uso">Seguridad, navegación, almacenamiento de la elección de cookies y funcionamiento básico.</td><td data-label="Condición">Siempre activas porque el sitio no funciona correctamente sin ellas.</td></tr>
+      <tr><td data-label="Categoría">Analítica</td><td data-label="Uso">Medición agregada de páginas visitadas y rendimiento mediante Google Analytics u otra herramienta informada.</td><td data-label="Condición">Solo se carga después de aceptar.</td></tr>
+      <tr><td data-label="Categoría">Publicidad</td><td data-label="Uso">Actualmente CIS no activa cookies de publicidad personalizada en esta landing.</td><td data-label="Condición">Inactivas.</td></tr>
     </tbody>
   </table>
 
